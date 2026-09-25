@@ -1,0 +1,216 @@
+/****** COLOR ******/
+:root {
+    --color-primary: #366299;
+    --color-secondary: #292521;
+    /* grey scale */
+    --color-greyscale-05: lab(98% 0 0);
+    --color-greyscale-10: lab(97% 0 0);
+    --color-greyscale-20: lab(91% 0 0);
+    --color-greyscale-30: lab(85% 0 0);
+    --color-greyscale-40: lab(66% 0 0);
+    --color-greyscale-50: lab(48% 0 0);
+    --color-greyscale-60: lab(34% 0 0);
+    --color-greyscale-70: lab(27% 0 0);
+    --color-greyscale-80: lab(15% 0 0);
+    --color-greyscale-90: lab(8% 0 0);
+    --color-greyscale-95: lab(5% 0 0);
+
+
+}
+
+
+/****** BORDER BOX ******/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "oswald";
+}
+
+/****** HEADER ******/
+header {
+    padding: 10px 0 10px 10px;
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: end;
+    column-gap: 8px;
+    border-bottom: 1px solid #eee;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.5px;
+}
+
+
+/****** Navigation ******/
+nav {
+    background-color: var(--color-greyscale-05);
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+    text-decoration: none;
+    padding: .85rem 10px .85rem 10px;
+}
+
+nav a:hover {
+    background-color: var(--color-greyscale-20);
+    color: var(--color-secondary);
+}
+
+nav.show {
+    display: block;
+}
+
+nav .active a {
+    color: var(--color-primary);
+}
+
+/****** HAMBURGER ******/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+}
+
+
+/****** HERO ******/
+.hero {
+    position: relative;
+}
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.hero h1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255,255,255,.5);
+    width: 100%;
+    color: var(--color-secondary);
+    font-weight: 400;
+}
+
+
+/****** SCHEDULE ******/
+.schedule {
+    border-collapse: collapse;
+    margin: 1rem 10px;
+    color: var(--color-greyscale-70);
+    font-size: .7rem;
+}
+.schedule tr {
+    border-bottom: 1px solid var(--color-greyscale-20);
+    &:hover {background-color: var(--color-greyscale-05);}
+}
+.schedule th {
+    background-color: var(--color-primary);
+    color: #f5ede1;
+    padding: 1rem 0;
+}
+.schedule td {
+    padding: 5px;
+    vertical-align: top;
+}
+.schedule p {
+    margin: 0;
+    padding: 0;
+}
+.schedule .time {
+font-weight: 700;
+font-size: .7rem;
+color: var(--color-greyscale-40);
+}
+.schedule .session {
+    font-weight: 600;
+    color: var(--color-primary);
+    padding-bottom: 5px;
+}
+.schedule .name {
+font-weight: 600;
+color: var(--color-secondary);
+text-align: center;
+}
+.schedule img {
+    display: block;
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+}
+.schedule .desc {
+    font-weight: 600;
+    color: var(--color-greyscale-50);
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+
+/****** SOCIAL ******/
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social img {
+    display: block;
+    width: 22px;
+    height: auto;
+}
+
+.social a {
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-greyscale-10);
+}
+
+.social a:hover {
+    background-color: var(--color-greyscale-20);
+}
+
+
+/****** FOOTER ******/
+footer {
+    background-color: var(--color-greyscale-10);
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
